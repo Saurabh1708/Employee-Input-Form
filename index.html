@@ -9,90 +9,96 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
-
-<body>
-    <div id="root" >
-        <div class="container" style="margin:auto" >
-            <form>
-                <div>
-                    <label class="form-heading">Employee Input Form</label>
-                </div>
-                <div class="name">
-                    <div class= "name-name">
-                        <span class="label-input" >First Name</span>
-                        <input type="text" size="12" name="first-name" id="first-name" autofocus >
-                    </div>
-
-                    <div class= "name-name">
-                        <label for="last-name" class="label-input"> Last Name</label>
-                        <input type="text" size="12" name="last-name" id="last-name" >
-                    </div>
+<body style="height:100vh">
+    <div class="container" style="margin:auto; height:100vh ">
+        <form>
+            <div>
+                <label class="form-heading">Employee Input Form</label>
+            </div>
+            <div class="name">
+                <div class="name-name">
+                    <span class="label-input">First Name</span>
+                    <input class="text-inp" type="text" size="12" name="first-name" id="first-name" autofocus="">
                 </div>
 
-                <div class="Genders">
-                    <div class="name-name">
-                        <label class="label-input" >Gender</label>
-                        <div>
-                            <label for="male">Male</label>
-                            <input type="radio" name="gender" id="male" value="MALE" >
-                            <label for="female">Female</label>
-                            <input type="radio" name="gender" id="female" value="FEMALE" >
-                        </div>
-                        
-                    </div>
-
+                <div class="name-name">
+                    <label for="last-name" class="label-input"> Last Name</label>
+                    <input class="text-inp" type="text" size="12" name="last-name" id="last-name">
                 </div>
-                <div class="marital-status">
-                    <div class="name-name">
-                        <label class="label-input" >Marital Status</label>
-                        <div>
-                            <label for="married">Married</label>
-                            <input type="radio" id="married" name="marital-status" value = "married" onclick = "hideSpouseName(this)" >
-    
-                            <label for="single">Single</label>
-                            <input type="radio" id="single" name="marital-status" value = "single" onclick = "hideSpouseName(this)" >
-                        </div>
-                       
+            </div>
+
+            <div class="Genders">
+                <div class="name-name">
+                    <label class="label-input">Gender</label>
+                    <div>
+                        <input type="radio" name="gender" id="male" value="MALE">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="FEMALE">
+
+                        <label for="female">Female</label>
                     </div>
+                    
                 </div>
 
-                <div class="name"  id="status">
-                    <div class="name-name">
-                        <label class="label-input" for="spouse-name">Name of Spouse</label>
-                        <input type="text" size="12" name="spouse-name" id="spouse-name"  >
-                    </div>
+            </div>
+            <div class="marital-status">
+                <div class="name-name">
+                    <label class="label-input">Marital Status</label>
+                    <div>
+                        <input type="radio" id="married" name="marital-status" value="married" onclick="hideSpouseName(this)">
 
-                </div>
-                <div class="other-details">
-                    <div class="name-name">
-                        <label class="label-input" for="spouse-name">Other Details</label>
-                       
-                        <textarea name="details" id="details" cols="20" rows="3"></textarea>
-                    </div>
-                </div>
+                        <label for="married">Married</label>
+                        <input type="radio" id="single" name="marital-status" value="single" onclick="hideSpouseName(this)">
 
-                <div class="tnc">
-                    <div class="name-name" style="flex-direction: row;">
-                        <input type="checkbox" name="tnc" id="tnc" >
-                        <label for="tnc"> I accept the <a href="#">Terms and Conditions</a> </label>
+                        <label for="single">Single</label>
                     </div>
                    
                 </div>
+            </div>
 
-                <div class="btn">
-                    <input type="reset" value="Reset" name="Reset" class="btn-btn" style="padding:5px; margin: 5px;">
-                    <input type="button" value="Save" name="save" class="btn-btn" onclick="checkValidation()" style="padding:5px; margin: 5px;">
-
+            <div class="name" id="status">
+                <div class="name-name">
+                    <label class="label-input" for="spouse-name">Name of Spouse</label>
+                    <input class="text-inp" type="text" size="12" name="spouse-name" id="spouse-name">
                 </div>
 
-            </form>
+            </div>
+            <div class="other-details">
+                <div class="name-name">
+                    <label class="label-input" for="spouse-name">Other Details</label>
+                   
+                    <textarea name="details" id="details" cols="20" rows="auto"></textarea>
+                </div>
+            </div>
 
-        </div>
+            <div class="tnc">
+                <div class="name-name" style="flex-direction: row;">
+                    <input type="checkbox" name="tnc" id="tnc">
+                    <label for="tnc"> I accept the <a href="#">Terms and Conditions</a> </label>
+                </div>
+               
+            </div>
+
+            <div class="btn">
+                <input type="reset" value="Reset" name="Reset" class="btn-btn" style="padding:5px; margin: 5px;">
+                <input type="button" value="Save" name="save" class="btn-btn" onclick="checkValidation()" style="padding:5px; margin: 5px;">
+
+            </div>
+
+        </form>
 
     </div>
+
+    <!--
+
+    <div id="root" >
+        
+    </div>
+    -->
     <script src="./emp.js"></script>
 
 
-</body>
 
+
+</body>
 </html>

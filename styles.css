@@ -1,6 +1,4 @@
-body{
-    background-color: #e6e6e6;
-}
+
 .center{
     margin: auto;
     width: 100%;
@@ -13,14 +11,17 @@ form{
 
 
 .container{
-    width: 100%;
+    width: 75%;
+    height: 100%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap; 
     justify-content:center;
     align-items: center;
-    padding: 0.4em; 
+    padding: 0.4em 0.1em 0.4em 0.1 ; 
     margin: 0.4em;
-    background-color: #b5bbdb;
+    background-color: #1a1a1a;
+    color: darkgray;
 
 }
 
@@ -32,12 +33,13 @@ form{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0.4em;
+    padding: 0.4em 0.1em 0.4em 0.1 ; 
+
 
 }
 
 .name-name{
-    padding: 0.4em;
+    padding: 0.4em 0.1em 0.4em 0.1em ; 
     margin: 0.4em;
     display: flex;
     flex-direction: column; 
@@ -45,12 +47,16 @@ form{
 
 .form-heading{
     height: auto;
-    font-size: 3em;
+    font-size: 4em;
     font-family: "Sofia", "sans-serif";
 }
 
 .label-input{
-    font-size: 15px;
+    font-family: Montserrat-SemiBold;
+    font-size: 1vw;
+    color: #e6e6e6;
+    line-height: 1.5;
+    text-transform: uppercase;
 
 }
 
@@ -66,4 +72,26 @@ button{
     margin: 0.4em;
 
 }
+body{
+    background-color: #e6e6e6;
+    height: auto;
+}
 
+#details,
+.text-inp{
+    background-color: #d9d9d9;
+    font-family: Montserrat-SemiBold;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2;
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+
+
+input[type=radio]{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 0.5em;
+}
