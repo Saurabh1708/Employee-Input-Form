@@ -2,9 +2,9 @@
 function hideSpouseName(element) {
 
     if (element.id === "single")
-        document.getElementById("status").style.display = "none";
+        document.getElementById("spouse-name-wrap").style.display = "none";
     else
-        document.getElementById("status").style.display = "block";
+        document.getElementById("spouse-name-wrap").style.display = "grid";
 
 }
 
@@ -45,7 +45,7 @@ function checkingEmptyValues() {
 
     }
 
-    else if (document.getElementById("status").style.display !== "none" && document.getElementById("spouse-name").value.length === 0) {
+    else if (document.getElementById("spouse-name-wrap").style.display !== "none" && document.getElementById("spouse-name").value.length === 0) {
         alert("Select Spouse Name");
         setTimeout(() => {
             document.getElementById("spouse-name").focus();
@@ -122,7 +122,7 @@ function checkValidation() {
         return;
     }
 
-    document.getElementById("root").innerHTML= "<h1>Thank you !</h1>"
+    document.getElementsByTagName("body")[0].innerHTML= "<h1>Thank you !</h1>"
 
 
 }

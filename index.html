@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,96 +10,85 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
-<body style="height:100vh">
-    <div class="container" style="margin:auto; height:100vh ">
+
+<body>
         <form>
-            <div>
-                <label class="form-heading">Employee Input Form</label>
-            </div>
-            <div class="name">
-                <div class="name-name">
-                    <span class="label-input">First Name</span>
-                    <input class="text-inp" type="text" size="12" name="first-name" id="first-name" autofocus="">
-                </div>
+            <h1 class="form-heading">Employee Input Form</h1>
 
-                <div class="name-name">
-                    <label for="last-name" class="label-input"> Last Name</label>
-                    <input class="text-inp" type="text" size="12" name="last-name" id="last-name">
-                </div>
-            </div>
+            <div class="names">
+               
+                <span id="span-first-name"> First Name</span>
 
-            <div class="Genders">
-                <div class="name-name">
-                    <label class="label-input">Gender</label>
-                    <div>
-                        <input type="radio" name="gender" id="male" value="MALE">
-                        <label for="male">Male</label>
-                        <input type="radio" name="gender" id="female" value="FEMALE">
+                <input type="text" class="item name" id="first-name">
+               
+                <span id="span-last-name"> Last Name</span>
 
-                        <label for="female">Female</label>
-                    </div>
-                    
-                </div>
+                <input type="text" class="item name" id="last-name">
+
 
             </div>
+
+            <div class="genders">
+                <span>Gender</span>
+                <label class="gender-item" for="gender" style="grid-column: 1/2; grid-row: 2/3">
+                    <input type="radio" name="gender" id="male" value="male">
+                    Male
+                </label>
+
+                <label class="gender-item" for="gender" style="grid-column: 2/3; grid-row: 2/3">
+                    <input type="radio" name="gender" id="female" value="female">
+                    Female
+                </label>
+
+            </div>
+
             <div class="marital-status">
-                <div class="name-name">
-                    <label class="label-input">Marital Status</label>
-                    <div>
-                        <input type="radio" id="married" name="marital-status" value="married" onclick="hideSpouseName(this)">
+                <span>Marital Status</span>
 
-                        <label for="married">Married</label>
-                        <input type="radio" id="single" name="marital-status" value="single" onclick="hideSpouseName(this)">
+                <label class="marital-status-item" for="marital-status" style="grid-column: 1/2; grid-row: 2/3">
+                    <input type="radio" name="marital-status" id="married" value="married" onclick="hideSpouseName(this)"">
+                    Married
+                </label>
 
-                        <label for="single">Single</label>
-                    </div>
-                   
-                </div>
-            </div>
-
-            <div class="name" id="status">
-                <div class="name-name">
-                    <label class="label-input" for="spouse-name">Name of Spouse</label>
-                    <input class="text-inp" type="text" size="12" name="spouse-name" id="spouse-name">
-                </div>
+                <label class="marital-status-item" for="status" style="grid-column: 2/3 ;grid-row: 2/3 ">
+                    <input type="radio" name="marital-status" id="single" value="single" onclick="hideSpouseName(this)">
+                    Single
+                </label>
 
             </div>
+
+            <div class="spouse-name genders" id="spouse-name-wrap">
+
+                <span> Spouse's Name</span>
+
+                <input type="text" class="item name" id="spouse-name">
+
+            </div>
+
             <div class="other-details">
-                <div class="name-name">
-                    <label class="label-input" for="spouse-name">Other Details</label>
-                   
-                    <textarea name="details" id="details" cols="20" rows="auto"></textarea>
-                </div>
+                <span>Other Details</span>
+
+                <input type="text" class="item name" id="spouse-name">
+
             </div>
 
             <div class="tnc">
-                <div class="name-name" style="flex-direction: row;">
-                    <input type="checkbox" name="tnc" id="tnc">
-                    <label for="tnc"> I accept the <a href="#">Terms and Conditions</a> </label>
-                </div>
-               
+                <input type="checkbox" name="tnc" id="tnc"> I accept the <a href="#">Terms & Condition</a> 
             </div>
 
             <div class="btn">
-                <input type="reset" value="Reset" name="Reset" class="btn-btn" style="padding:5px; margin: 5px;">
-                <input type="button" value="Save" name="save" class="btn-btn" onclick="checkValidation()" style="padding:5px; margin: 5px;">
-
+                <button type="reset">Reset</button>
+                <input type="button" value="save" id="save" onclick="checkValidation()">
             </div>
 
         </form>
 
-    </div>
 
-    <!--
-
-    <div id="root" >
-        
-    </div>
-    -->
     <script src="./emp.js"></script>
 
 
 
 
 </body>
+
 </html>
